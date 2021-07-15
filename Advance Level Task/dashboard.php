@@ -54,13 +54,13 @@ if(strlen($_SESSION['alogin'])=="")
                                 <div class="row">
                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                         <a class="dashboard-stat bg-primary" href="manage-students.php">
-<?php
-$sql1 ="SELECT StudentId from tblstudents ";
-$query1 = $dbh -> prepare($sql1);
-$query1->execute();
-$results1=$query1->fetchAll(PDO::FETCH_OBJ);
-$totalstudents=$query1->rowCount();
-?>
+                                            <?php
+                                            $sql1 ="SELECT StudentId from tblstudents ";
+                                            $query1 = $dbh -> prepare($sql1);
+                                            $query1->execute();
+                                            $results1=$query1->fetchAll(PDO::FETCH_OBJ);
+                                            $totalstudents=$query1->rowCount();
+                                            ?>
 
                                             <span class="number counter"><?php echo htmlentities($totalstudents);?></span>
                                             <span class="name">Regd Users</span>
@@ -72,13 +72,13 @@ $totalstudents=$query1->rowCount();
 
                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                         <a class="dashboard-stat bg-danger" href="manage-subjects.php">
-<?php
-$sql ="SELECT id from  tblsubjects ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$totalsubjects=$query->rowCount();
-?>
+                                        <?php
+                                        $sql ="SELECT id from  tblsubjects ";
+                                        $query = $dbh -> prepare($sql);
+                                        $query->execute();
+                                        $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                        $totalsubjects=$query->rowCount();
+                                        ?>
                                             <span class="number counter"><?php echo htmlentities($totalsubjects);?></span>
                                             <span class="name">Subjects Listed</span>
                                             <span class="bg-icon"><i class="fa fa-ticket"></i></span>
@@ -90,12 +90,12 @@ $totalsubjects=$query->rowCount();
                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                         <a class="dashboard-stat bg-warning" href="manage-classes.php">
                                         <?php
-$sql2 ="SELECT id from  tblclasses ";
-$query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$results2=$query2->fetchAll(PDO::FETCH_OBJ);
-$totalclasses=$query2->rowCount();
-?>
+                                        $sql2 ="SELECT id from  tblclasses ";
+                                        $query2 = $dbh -> prepare($sql2);
+                                        $query2->execute();
+                                        $results2=$query2->fetchAll(PDO::FETCH_OBJ);
+                                        $totalclasses=$query2->rowCount();
+                                        ?>
                                             <span class="number counter"><?php echo htmlentities($totalclasses);?></span>
                                             <span class="name">Total classes listed</span>
                                             <span class="bg-icon"><i class="fa fa-bank"></i></span>
@@ -107,12 +107,12 @@ $totalclasses=$query2->rowCount();
                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                         <a class="dashboard-stat bg-success" href="manage-results.php">
                                         <?php
-$sql3="SELECT  distinct StudentId from  tblresult ";
-$query3 = $dbh -> prepare($sql3);
-$query3->execute();
-$results3=$query3->fetchAll(PDO::FETCH_OBJ);
-$totalresults=$query3->rowCount();
-?>
+                                        $sql3="SELECT  distinct StudentId from  tblresult ";
+                                        $query3 = $dbh -> prepare($sql3);
+                                        $query3->execute();
+                                        $results3=$query3->fetchAll(PDO::FETCH_OBJ);
+                                        $totalresults=$query3->rowCount();
+                                        ?>
 
                                             <span class="number counter"><?php echo htmlentities($totalresults);?></span>
                                             <span class="name">Results Declared</span>
